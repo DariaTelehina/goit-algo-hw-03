@@ -1,4 +1,4 @@
-# імпортуємо клас datetime з модуля datetime
+# імпортую клас datetime з модуля datetime
 from datetime import datetime
 
 def get_days_from_today(date: str):
@@ -8,15 +8,15 @@ def get_days_from_today(date: str):
         # та за допомогою методу date() лишаю дату, прибираючи час
         date = datetime.strptime(date.replace(" ", ""), "%Y-%m-%d").date()
     except (ValueError, TypeError):
-        # якщо дата у невірному форматі або дата некоректна, виводимо повідомлення і завершуємо
+        # якщо дата у невірному форматі або дата некоректна, виводжу повідомлення і завершую
         print("Please enter a valid date in format 'YYYY-MM-DD'")
         return None
-    # отримуємо сьогоднішню дату (без часу)
+    # отримую сьогоднішню дату (без часу)
     date_now = datetime.today().date()
-    # повертаємо результат функції у вигляді обрахунку різниці у днях
+    # повертаю результат функції у вигляді обрахунку різниці у днях
     return (date_now - date).days
 
-# тестуємо функцію з різними форматами введення дати
+# тестую функцію з різними форматами введення дати
 print("Коректна дата в минулому:")
 print(get_days_from_today("2022-10-09"))
 
