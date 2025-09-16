@@ -3,7 +3,7 @@ from random import sample
 def get_numbers_ticket(min_value: int, max_value: int, quantity: int) -> list:
 
     try:
-        # перевіряю основні обмеження:
+        # Перевіряю основні обмеження:
         # min_value та max_value повинні бути в межах [1, 1000],
         # а quantity не може перевищувати довжину діапазону
         if min_value >= 1 and max_value <= 1000 and quantity <= (max_value - min_value + 1):
